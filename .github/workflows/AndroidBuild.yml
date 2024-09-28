@@ -29,4 +29,4 @@ jobs:
         uses: actions/upload-artifact@v3.2.1
         with:
           name: County Revenue.apk
-          path: app/build/outputs/apk/app-debug.apk
+          path: app/build/outputs/apk/debug/app-debug.apk
