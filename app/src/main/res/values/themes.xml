@@ -2,8 +2,8 @@
 <resources>
 
     <style name="Theme.MySplashScreen" parent="Theme.SplashScreen">
-        <item name="windowSplashScreenBackground">@color/Neon_Red</item>
-        <item name="windowSplashScreenAnimatedIcon">@drawable/countyrevlogo</item>
+        <item name="windowSplashScreenBackground">@color/white</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/county_logo</item>
         <item name="postSplashScreenTheme">@style/Theme.SplashScreen</item>
     </style>
 

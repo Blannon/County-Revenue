@@ -70,5 +70,12 @@ dependencies {
     //SplashScreen
     implementation(libs.androidx.core.splashscreen)
     // Extended Icons
-    implementation("androidx.compose.material:material-icons-extended-android:1.5.4")
+    implementation(libs.androidx.material.icons.extended.android)
+
+    //Voyager Navigation
+    implementation(libs.voyager.navigator)
+    implementation(libs.voyager.tab.navigator)
+    implementation(libs.voyager.transitions)
+
+
 }
