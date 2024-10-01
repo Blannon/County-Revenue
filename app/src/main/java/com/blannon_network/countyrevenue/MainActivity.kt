@@ -12,6 +12,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
+import com.blannon_network.countyrevenue.screens.LoginScreen
 import com.blannon_network.countyrevenue.ui.theme.CountyRevenueTheme
 
 class MainActivity : ComponentActivity() {
@@ -21,7 +22,7 @@ class MainActivity : ComponentActivity() {
         installSplashScreen()
         setContent {
             CountyRevenueTheme {
-
+                LoginScreen()
             }
         }
     }
