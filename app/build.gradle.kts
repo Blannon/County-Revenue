@@ -77,5 +77,7 @@ dependencies {
     implementation(libs.voyager.tab.navigator)
     implementation(libs.voyager.transitions)
 
+    implementation(libs.androidx.lifecycle.viewmodel.compose)
+
 
 }

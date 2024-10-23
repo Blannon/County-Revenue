@@ -2,20 +2,24 @@ package com.blannon_network.countyrevenue.screens
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.Spacer
-import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import cafe.adriel.voyager.core.screen.Screen
+import cafe.adriel.voyager.navigator.LocalNavigator
 
 
 class RevenueStreams():Screen{
@@ -23,35 +27,51 @@ class RevenueStreams():Screen{
     @Preview(showBackground = true, showSystemUi = true)
     @Composable
     override fun Content() {
+        var navigator = LocalNavigator.current
 
-
-            Box(Modifier.padding(top = 50.dp)
-                .fillMaxSize()){
+            Box(Modifier.padding()
+                .fillMaxWidth()
+                ){
                 Column(
-                    Modifier.padding(top = 50.dp)
+                    Modifier.padding()
+//                        .fillMaxWidth()
+//                        .fillMaxSize()
                 ) {
 
                 OutlinedButton(
                     modifier = Modifier
-                        .width(400.dp),
-                    onClick = {}
+                        .width(650.dp)
+                        .height(75.dp),
+                     shape = RoundedCornerShape(1.dp),
+                    colors = ButtonDefaults.buttonColors(Color.White),
+                    onClick = {
+                    }
                 ) {
                     Text("Check CESS Compliance",
                         fontWeight = FontWeight.SemiBold,
-                        fontSize = 20.sp
+                        fontSize = 20.sp,
+                        color = Color.Black,
+                        textAlign = TextAlign.Start,
+                        //modifier = Modifier.padding(start = 3.dp)
                     )
                 }
-                Spacer(Modifier.height(16.dp))
+                //Spacer(Modifier.height(16.dp))
 
                 OutlinedButton(
                     modifier = Modifier
-                        .width(400.dp)
-                        .padding(30.dp),
-                    onClick = {}
+                        .width(620.dp)
+                        .height(75.dp)
+                        .padding(start = 15.dp, end = 15.dp),
+                    colors = ButtonDefaults.buttonColors(Color.White),
+                    shape = RoundedCornerShape(1.dp),
+                    onClick = {
+                        navigator?.push(CessPoints())
+                    }
                 ) {
                     Text("Cess",
                         fontWeight = FontWeight.SemiBold,
-                        fontSize = 20.sp
+                        fontSize = 20.sp,
+                        color = Color.Black,
                     )
                 }
             }

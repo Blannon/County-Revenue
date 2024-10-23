@@ -13,7 +13,8 @@ import com.blannon_network.countyrevenue.ui.theme.CountyRevenueTheme
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
+        //enableEdgeToEdge()
+
         installSplashScreen()
         setContent {
             CountyRevenueTheme {
