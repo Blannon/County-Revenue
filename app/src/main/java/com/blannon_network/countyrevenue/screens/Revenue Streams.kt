@@ -1,11 +1,6 @@
 package com.blannon_network.countyrevenue.screens
 
-import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.height
-import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.OutlinedButton
@@ -21,40 +16,45 @@ import androidx.compose.ui.unit.sp
 import cafe.adriel.voyager.core.screen.Screen
 import cafe.adriel.voyager.navigator.LocalNavigator
 
-
-class RevenueStreams():Screen{
+class RevenueStreams : Screen {
 
     @Preview(showBackground = true, showSystemUi = true)
     @Composable
     override fun Content() {
-        var navigator = LocalNavigator.current
-            Box(Modifier.padding()
+        val navigator = LocalNavigator.current
+
+        Box(
+            modifier = Modifier
                 .fillMaxWidth()
-                ){
-                Column(
-                    Modifier.padding()
-//                        .fillMaxWidth()
-//                        .fillMaxSize()
-                ) {
+
+        ) {
+            Column(
+                modifier = Modifier
+                    .fillMaxWidth()
+
+            ) {
 
                 OutlinedButton(
                     modifier = Modifier
                         .width(650.dp)
                         .height(75.dp),
-                     shape = RoundedCornerShape(1.dp),
+                    shape = RoundedCornerShape(1.dp),
                     colors = ButtonDefaults.buttonColors(Color.White),
                     onClick = {
+
                     }
                 ) {
-                    Text("Check CESS Compliance",
+                    Text(
+                        "Check CESS Compliance",
                         fontWeight = FontWeight.SemiBold,
                         fontSize = 20.sp,
                         color = Color.Black,
                         textAlign = TextAlign.Start,
-                        //modifier = Modifier.padding(start = 3.dp)
+                        modifier = Modifier.padding(start = 3.dp)
                     )
                 }
-                //Spacer(Modifier.height(16.dp))
+
+                Spacer(Modifier.height(16.dp))
 
                 OutlinedButton(
                     modifier = Modifier
@@ -67,21 +67,14 @@ class RevenueStreams():Screen{
                         navigator?.push(CessPoints())
                     }
                 ) {
-                    Text("Cess",
+                    Text(
+                        "Cess",
                         fontWeight = FontWeight.SemiBold,
                         fontSize = 20.sp,
-                        color = Color.Black,
+                        color = Color.Black
                     )
                 }
             }
-
         }
     }
 }
-
-
-
-
-
-
-
