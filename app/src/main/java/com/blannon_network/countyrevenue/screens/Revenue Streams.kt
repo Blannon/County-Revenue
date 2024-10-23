@@ -28,7 +28,6 @@ class RevenueStreams():Screen{
     @Composable
     override fun Content() {
         var navigator = LocalNavigator.current
-
             Box(Modifier.padding()
                 .fillMaxWidth()
                 ){
